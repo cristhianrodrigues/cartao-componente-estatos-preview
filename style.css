@@ -1,0 +1,185 @@
+:root {
+    --cor-body-background: hsl(233, 47%, 7%);
+    ---cor-container-background: hsl(244, 38%, 16%);
+    
+    --cor-destaque: hsl(277, 64%, 61%);
+    --cor-principal: hsl(0, 0%, 100%);
+    --cor-paragrafo: hsl(0, 0%, 100%, 0.75);
+    --cor-descricao: hsla(0, 0%, 100%, 0.6);
+
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: var(--cor-body-background);
+}
+
+.container {
+    background-color: var(---cor-container-background);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 25vw;
+    margin-bottom: 25vw;
+    margin-inline: 7vw;
+    border-radius: 2.2vw;
+}
+
+.lado-direito {
+    display: flex;
+}
+
+.imagens {
+    background-image: url(./images/image-header-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vw;
+    border-top-left-radius: 2.2vw;
+    border-top-right-radius: 2.2vw;
+    filter: brightness(150%);
+}
+
+.filtro {
+    background-color: hsl(277deg 100% 20%);
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 2.2vw;
+    border-top-right-radius: 2.2vw;
+    opacity: 0.6;
+}
+
+
+.lado-esquerdo {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5vw;
+    margin: 5vw;
+    font-size: 3.5vw;
+}
+
+.titulo {
+    color: var(--cor-principal);
+    font-weight: 700;
+}
+
+.destaque {
+    color: var(--cor-destaque);
+}
+
+.paragrafo {
+    color: var(--cor-paragrafo);
+    font-weight: 400;
+    line-height: 7vw;
+}
+
+.numeros {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 7vw;
+    color: var(--cor-principal); 
+}
+
+.descricao {
+    color: var(--cor-descricao);
+    text-transform: uppercase;
+    font-size: 3.5vw;
+}
+
+
+@media screen and (min-width: 1024px) {
+    html {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 65vw;
+        height: 25vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-inline: 0vw;
+        border-radius: 0.4vw;
+    }
+
+    .lado-direito {
+        display: flex;
+        width: 50%;
+        height: 25vw;
+        border-top-left-radius: 0vw;
+        border-top-right-radius: 0.4vw;
+        border-bottom-right-radius: 0.4vw;
+    }
+    
+    .imagens {
+        background-image: url(./images/image-header-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 25vw;
+        border-top-left-radius: 0vw;
+        border-top-right-radius: 0.4vw;
+        border-bottom-right-radius: 0.4vw;
+    }
+    
+    .filtro {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 0vw;
+        border-top-right-radius: 0.4vw;
+        border-bottom-right-radius: 0.4vw;
+        opacity: 0.6;
+    }
+
+    .lado-esquerdo {
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        width: 50%;
+        height: 20vw;
+        padding-top: 1.5vw;
+        padding-inline: 4vw;
+        margin: 0vw;
+        font-size: 1vw;
+    }
+
+    .estatisticas {
+        display: flex;
+        text-align: start;
+    }
+
+    .estatisticas div {
+        width: 100%;
+        margin-top: 2vw;
+        margin-left: 0;
+        margin-right: 4vw;
+    }
+    
+    .paragrafo {
+        line-height: 1.4vw;
+
+    }
+    
+    .numeros {
+        font-size: 1.5vw;
+    }
+    
+    .descricao {
+        font-size: 1vw;
+    }
+}
+
+
